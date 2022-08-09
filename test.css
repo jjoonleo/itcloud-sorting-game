@@ -8,3 +8,15 @@
     width: 50px;
     border: 1px solid #000;
 }
+#array.invisible{
+    display: none;
+}
+
+#scoreboard{
+    list-style: none;
+}
+
+#scoreboard>li *{
+    display: inline;
+    margin: 20px;
+}

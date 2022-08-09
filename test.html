@@ -8,18 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="array">
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
+    <input id="nameInput" type="text">
+    <button id="startBtn" onclick="onStart()">시작하기</button>
+    <button id="startBtn" onclick="stop()">취소하기</button>
+    <div id="array" class="invisible">
+        <h3 id="0" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="1" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="2" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="3" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="4" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="5" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="6" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="7" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="8" onclick="onElementClicked(this.id)"></h3>
+        <h3 id="9" onclick="onElementClicked(this.id)"></h3>
     </div>
+    <ul id="scoreboard">
+
+    </ul>
 </body>
 <script type="text/javascript" src="./test.js"></script> 
 </html>
