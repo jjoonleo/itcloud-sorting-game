@@ -4,28 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <input id="nameInput" type="text">
-    <button id="startBtn" onclick="onStart()">시작하기</button>
-    <button id="startBtn" onclick="stop()">취소하기</button>
-    <div id="array" class="invisible">
-        <h3 id="0" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="1" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="2" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="3" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="4" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="5" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="6" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="7" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="8" onclick="onElementClicked(this.id)"></h3>
-        <h3 id="9" onclick="onElementClicked(this.id)"></h3>
+    <div class="chip">
+        <div class="chip__icon">
+        <ion-icon name="color-palette"></ion-icon></div>
+        <p>정렬해 보기</p>
+        <div class="chip__close">
+        <ion-icon name="close"></ion-icon>
+        </div>
     </div>
+    <div class="search">
+        <input id="nameInput" type="text" class="search__input" placeholder="이름을 입력해 주세요">
+    </div>
+    
+    <div id="btns">
+        <div class="btn btn__primary"  id="startBtn" onclick="onStart()"><p>시작하기</p></div>
+        <div class="btn btn__primary"  id="startBtn" onclick="swapElement()"><p>바꾸기</p></div>
+        <div class="btn btn__secondary" id="startBtn" onclick="stop()"><p >취소하기</p></div>
+    </div>
+    
+    <div class="checkbox">
+        <div id="array" class="checkbox__1 invisible">
+            <label id="0" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="1" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="2" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="3" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="4" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="5" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="6" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="7" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="8" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+            <label id="9" class="checkbox-1" onclick="onElementClicked(this.id)"></label>
+        </div>
+    </div>
+    <h1>순위</h1>
     <ul id="scoreboard">
-
+        
     </ul>
-</body>
+    <div id="videos">
+        <iframe width="560" height="350" src="https://www.youtube.com/embed/iLd0N5NYtck?playlist=iLd0N5NYtck&loop=1" title="Insertion Sort Algorithm (4K)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="350" src="https://www.youtube.com/embed/2NeNKvpH-EM?playlist=2NeNKvpH-EM&loop=1" title="Selection Sort Algorithm (4K)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    </body>
 <script type="text/javascript" src="./test.js"></script> 
 </html>

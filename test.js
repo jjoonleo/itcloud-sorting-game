@@ -3,7 +3,7 @@ const startBtn = document.getElementById('startBtn');
 const nameInput = document.getElementById('nameInput');
 const scoreboard = document.getElementById('scoreboard');
 console.log(htmlArray.children);
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let array = [10, 6, 1, 9, 3, 2, 4, 8, 7, 5];
 let scores = [];
 let isStarted = false;
 let userName;
@@ -12,13 +12,15 @@ let text = ["시작하기","제출하기"];
 function startStop(){
     isStarted = !isStarted;
     htmlArray.classList.toggle("invisible");
-    startBtn.innerText = text[Number(isStarted)];
+    startBtn.children[0].innerText = text[Number(isStarted)];
+    flag = -1;
 }
 
 function stop(){
     isStarted = false;
-    htmlArray.className = "invisible";
-    startBtn.innerText = text[Number(isStarted)];
+    htmlArray.className = "invisible checkbox__1";
+    startBtn.children[0].innerText = text[Number(isStarted)];
+    flag = -1;
 }
 
 function onStart(){
@@ -51,7 +53,7 @@ function onStart(){
                 let nameHTML = document.createElement("h3");
                 nameHTML.innerText = data[0];
                 let scoreHTML = document.createElement("h3");
-                scoreHTML.innerText = data[1];
+                scoreHTML.innerText = data[1]+"회";
                 li.appendChild(nameHTML);
                 li.appendChild(scoreHTML);
                 scoreboard.appendChild(li);
@@ -135,13 +137,7 @@ window.onkeydown = (e) => {
         ctrElementClick(index);
 
         if(e.key == "q"){
-            if(flag != 1){
-                let tmp = array[firstIndex];
-                array[firstIndex] = array[secondIndex];
-                array[secondIndex] = tmp;
-                setHtmlArray(firstIndex, secondIndex);
-                flag = 0;
-            }
+           swapElement();
         }
     }
     
@@ -152,9 +148,19 @@ function onElementClicked(clicked_id){
     console.log(clicked_id);
 }
 
+function swapElement(){
+    if(flag == 0){
+        let tmp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = tmp;
+        setHtmlArray(firstIndex, secondIndex);
+        flag = 0;
+    }
+}
+
 function ctrElementClick(index){
     if (index < array.length) {
-        if (flag == 0) {
+        if (flag != 1) {
             clearHtmlArray();
             htmlArray.children[index].style.background = "gray";
             firstIndex = index;
