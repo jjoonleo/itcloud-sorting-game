@@ -33,7 +33,7 @@ function onStart(){
             startStop();
             nameInput.value = "";
         }else{
-            alert("이름을 입력하세요.");
+            alert("학번이름을 입력하세요.");
         }
     }
     else{
@@ -83,6 +83,7 @@ function shuffle(array) {
 
 function init(){
     //shuffle(array);
+    array = [10, 6, 1, 9, 3, 2, 4, 8, 7, 5];
     console.log(array);
     numberOfCheckings = 0;
     clearHtmlArray();
